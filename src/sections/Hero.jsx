@@ -1,8 +1,15 @@
 import Button from "../components/Button";
 import { arrowRight } from "../assets/icons";
-import { statistics } from "../constants"
+import { shoes, statistics } from "../constants"
+import { bigShoe1 } from "../assets/images";
+import ShoeCard from "../components/ShoeCard"
+import { useState } from "react";
+
+
 
 const Hero = () => {
+  const [bigShoeImg, setBigShoeImg] = useState(bigShoe1)
+
   return (
     <section
       id="home"
@@ -15,7 +22,7 @@ const Hero = () => {
         <p className="max-sm:text-xl text-2xl font-montserrat text-coral-red">Our Summer Collection</p>
         
         <h1 className="mt-10 font-palanquin text-8xl font-bold max-sm:text-[68px] max-sm:leading-[80px]">
-          <span className="xl:bg-white xl:whitespace-nowrap relative z-10 pr-10">The New Arrival</span>
+          <span className="xl:bg-white/75 xl:whitespace-nowrap relative z-10 pr-8">The New Arrival</span>
           <br />
           <span className="text-coral-red font-mono inline-block mt-5">Nike</span> Shoes
         </h1>
@@ -33,10 +40,24 @@ const Hero = () => {
             </div>
           ))}
         </div>
-
       </div>
 
-          
+      <div className="relative flex-1 flex justify-center items-center xl:min-h-screen
+        max-xl:py-40 bg-primary bg-center bg-hero bg-cover">
+        
+        <img className="object-contain relative z-10" src={bigShoeImg} width={610} height={500} alt="Nike shoe logo" />
+        
+        <div className="flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6">
+          {shoes.map((shoe) => (
+          <div key={shoe}>
+            <ShoeCard 
+              imageURL={shoe} 
+              changeBigShoeImg={(bigShoe) => setBigShoeImg(bigShoe)}
+              bigShoeImg={bigShoeImg}
+            /></div>
+            ))}
+        </div>
+      </div>
     </section>
   );
 };
