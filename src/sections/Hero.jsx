@@ -21,13 +21,15 @@ const Hero = () => {
         
         <p className="max-sm:text-xl text-2xl font-montserrat text-coral-red">Our Summer Collection</p>
         
-        <h1 className="mt-10 font-palanquin text-8xl font-bold max-sm:text-[68px] max-sm:leading-[80px]">
+        <h1 className="mt-10 font-palanquin text-8xl max-xl:text-[84px] font-bold max-sm:text-[68px] max-sm:leading-[80px]">
           <span className="xl:bg-white/75 xl:whitespace-nowrap relative z-10 pr-8">The New Arrival</span>
           <br />
           <span className="text-coral-red font-mono inline-block mt-5">Nike</span> Shoes
         </h1>
 
-        <p className="font-montserrat font-bold text-slate-700 text-lg leading-8 mt-6 mb-14">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, laborum.</p>
+        <p className="font-montserrat font-bold text-slate-700 text-lg leading-8 mt-6 mb-14">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, laborum.
+          </p>
 
         <Button label="Shop now" iconURL={arrowRight}/>
         
@@ -45,9 +47,11 @@ const Hero = () => {
       <div className="relative flex-1 flex justify-center items-center xl:min-h-screen
         max-xl:py-40 bg-primary bg-center bg-hero bg-cover">
         
-        <img className="object-contain relative z-10" src={bigShoeImg} width={610} height={500} alt="Nike shoe logo" />
-        
-        <div className="flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6">
+        <div className="flex justify-center items-center w-full h-[95%]">
+          <img className="object-contain relative z-10 w-auto h-auto max-w-[610px] max-h-[500px]" src={bigShoeImg} alt="Nike shoe logo" />
+        </div>
+
+        <div className="flex sm:gap-6 gap-4 absolute -bottom-[3%] sm:left-[10%] max-sm:px-6">
           {shoes.map((shoe) => (
           <div key={shoe}>
             <ShoeCard 
