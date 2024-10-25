@@ -1,29 +1,42 @@
+import {
+  Hero,
+  SuperQuality,
+  Subscribe,
+  SpecialOffer,
+  CustomerReviews,
+  Footer,
+  PopularProducts
+} from "./sections/exportComponentsHelper";
+import Nav from './components/Nav'
+
+
+
 const App = () => (
   <main className="relative">
-    Nav
+    <Nav />
     <section className="x1:padding-1 wide:padding-r padding-b">
-      Hero section
+      <Hero />
     </section>
     <section className="padding">
-      popular products
+      <PopularProducts />
     </section>
     <section className="padding">
-      superQuality
+      <SuperQuality />
     </section>
     <section className="padding-x py-10">
-      services
+      <services />
     </section>
     <section className="padding">
-      specialOffers
+      <SpecialOffer />
     </section>
     <section className="bg-pale-blue padding">
-      cunstomerReviews
+      <CustomerReviews />
     </section>
     <section className="padding-x sm:py-32 py-16 w-full">
-      Subscribe
+      <Subscribe />
     </section>
     <section className="padding-x padding-t pb-8 bg-black">
-      footer
+      <Footer />
     </section>
   </main>  
 );
