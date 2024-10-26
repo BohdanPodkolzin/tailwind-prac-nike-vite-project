@@ -2,9 +2,7 @@
 
 const SpecialOffer = () => {
   return (
-    <div>
-      
-    </div>
+    <div></div>
   )
 }
 
