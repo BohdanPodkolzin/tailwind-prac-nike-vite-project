@@ -10,10 +10,19 @@ function Nav() {
             <a href="/"><img src={headerLogo} alt="NikeLogo" width={130} height={30} /></a>
             <ul className="flex-1 flex justify-center items-center gap-16 max-lg:hidden">
                 {navLinks.map((item) => (
-                    <li key={item.label}>
-                        <a href={item.href} className="font-montserrat 
-                        leading-normal text-lg text-slate-800">{item.label}</a>
-                    </li>
+                    <li key={item.label} className="relative group">
+                        <a
+                          href={item.href}
+                          className="font-mono leading-normal text-2xl text-slate-800 font-bold"
+                        >
+                          {item.label}
+                        </a>
+                        <span
+                          className="absolute left-0 bottom-0 w-2 rounded-xl h-1 bg-coral-red transition-all duration-300 ease-out
+                            group-hover:w-full">
+
+                        </span>
+                      </li>
                 ))}
             </ul>
             <div className="lg:hidden">
